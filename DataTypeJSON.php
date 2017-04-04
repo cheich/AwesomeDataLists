@@ -65,4 +65,13 @@ class DataTypeJSON implements DataTypeInterface {
 
     return $json;
   }
+
+  /**
+   * Get mime type
+   *
+   * @return string
+   */
+  public function getMimeType() {
+    return 'application/json';
+  }
 }

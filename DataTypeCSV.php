@@ -93,4 +93,13 @@ class DataTypeCSV implements DataTypeInterface {
 
     return ob_get_clean();
   }
+
+  /**
+   * Get mime type
+   *
+   * @return string
+   */
+  public function getMimeType() {
+    return 'text/csv';
+  }
 }

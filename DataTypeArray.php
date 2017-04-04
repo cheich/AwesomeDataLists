@@ -42,4 +42,13 @@ class DataTypeArray implements DataTypeInterface {
 
     return $array;
   }
+
+  /**
+   * Get mime type
+   *
+   * @return string
+   */
+  public function getMimeType() {
+    return 'application/x-httpd-php';
+  }
 }

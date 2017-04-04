@@ -106,4 +106,13 @@ class DataTypeXML implements DataTypeInterface {
 
     return $xml->asXML();
   }
+
+  /**
+   * Get mime type
+   *
+   * @return string
+   */
+  public function getMimeType() {
+    return 'application/xml';
+  }
 }

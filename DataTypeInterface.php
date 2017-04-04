@@ -26,4 +26,11 @@ interface DataTypeInterface {
    * @return mixed
    */
   public function encode(Data $data);
+
+  /**
+   * Get mime type
+   *
+   * @return string
+   */
+  public function getMimeType();
 }
