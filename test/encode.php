@@ -11,7 +11,9 @@
     require 'print_table.php';
 
     use AwesomeDataLists\Data as Data;
-    use AwesomeDataLists\DataType as DataType;
+    use AwesomeDataLists\DataTypeCSV as DataTypeCSV;
+    use AwesomeDataLists\DataTypeJSON as DataTypeJSON;
+    use AwesomeDataLists\DataTypeXML as DataTypeXML;
 
     try {
       //
@@ -23,25 +25,25 @@
       // CSV
       //
       echo '<h2>Encode CSV</h2>';
-      $datatype = new DataType(DataType::CSV);
+      $datatype = new DataTypeCSV();
       echo $datatype->encode($data);
 
       //
       // JSON
       //
       echo '<h2>Encode JSON</h2>';
-      $datatype = new DataType(DataType::JSON, JSON_PRETTY_PRINT);
+      $datatype = new DataTypeJSON(JSON_PRETTY_PRINT);
       echo $datatype->encode($data);
 
       //
       // XML
       //
       echo '<h2>Encode XML</h2>';
-      $datatype = new DataType(DataType::XML);
+      $datatype = new DataTypeXML(['formatOutput' => true]);
       echo htmlspecialchars($datatype->encode($data));
 
       echo '<h2>Encode multi dimensional XML</h2>';
-      $datatype = new DataType(DataType::XML);
+      $datatype = new DataTypeXML(['formatOutput' => true]);
       echo htmlspecialchars($datatype->encode(new Data([
         [
           'id' => 1,
@@ -62,7 +64,7 @@
             'third' => '2C child',
           ]
         ],
-      ])), ['formatOutput' => true]);
+      ])));
     } catch (DataException $e) {
       echo $e->getMessage();
     }

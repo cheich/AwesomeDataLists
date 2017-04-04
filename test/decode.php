@@ -11,14 +11,16 @@
     require 'print_table.php';
 
     use AwesomeDataLists\Data as Data;
-    use AwesomeDataLists\DataType as DataType;
+    use AwesomeDataLists\DataTypeCSV as DataTypeCSV;
+    use AwesomeDataLists\DataTypeJSON as DataTypeJSON;
+    use AwesomeDataLists\DataTypeXML as DataTypeXML;
 
     try {
       //
       // CSV
       //
       echo '<h2>Decode CSV</h2>';
-      $datatype = new DataType(DataType::CSV);
+      $datatype = new DataTypeCSV();
       $data = $datatype->decode(file_get_contents('dummy/data.csv'));
       print_table($data);
 
@@ -26,7 +28,7 @@
       // JSON
       //
       echo '<h2>Decode JSON</h2>';
-      $datatype = new DataType(DataType::JSON);
+      $datatype = new DataTypeJSON();
       $data = $datatype->decode(file_get_contents('dummy/data.json'));
       print_table($data);
 
@@ -34,7 +36,7 @@
       // XML
       //
       echo '<h2>Decode XML</h2>';
-      $datatype = new DataType(DataType::XML);
+      $datatype = new DataTypeXML();
       $data = $datatype->decode(file_get_contents('dummy/data.xml'));
       print_table($data);
     } catch (DataException $e) {
