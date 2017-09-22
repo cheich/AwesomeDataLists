@@ -202,41 +202,41 @@ class Data implements \Countable, \Iterator, \Serializable, \ArrayAccess {
    *
    * @return void
    */
-	public function rewind() {
-		$this->index = 0;
-	}
+  public function rewind() {
+    $this->index = 0;
+  }
 
   /**
    * Count rows
    *
    * @return integer
    */
-	public function count() {
-		return count($this->data);
-	}
+  public function count() {
+    return count($this->data);
+  }
 
   /**
    * Get column names
    *
    * @return array
    */
-	public function columns() {
-		return array_keys($this->current());
-	}
+  public function columns() {
+    return array_keys($this->current());
+  }
 
   /**
    * Count columns
    *
    * @return array
    */
-	public function columnCount() {
-		return count($this->columns());
-	}
+  public function columnCount() {
+    return count($this->columns());
+  }
 
   /**
    * Reset all changes
    */
-	public function reset() {
-		$this->data = $this->_data;
-	}
+  public function reset() {
+    $this->data = $this->_data;
+  }
 }
