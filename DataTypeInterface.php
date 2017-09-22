@@ -3,7 +3,7 @@
 /**
  * @package AwesomeDataLists
  */
-namespace AwesomeDataLists;
+namespace Cheich\AwesomeDataLists;
 
 /**
  * @package AwesomeDataLists
