@@ -1,5 +1,27 @@
 # AwesomeDataLists
 
+Simple data handler
+
+## Install
+
+### Composer
+
+#### Command Line
+
+```
+composer require cheich/awesome-data-lists:dev-master
+```
+
+#### composer.json
+
+```
+{
+  "require": {
+    "cheich/awesome-data-lists": "dev-master"
+  }
+}
+```
+
 ## Requirements
 
 - PHP >= 5.3.0
