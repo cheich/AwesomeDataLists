@@ -7,13 +7,20 @@
   <body>
     <pre><?php
 
-    require '../autoload.php';
+    require '../src/Data.php';
+    require '../src/DataException.php';
+    require '../src/DataTypeInterface.php';
+    require '../src/DataTypeArray.php';
+    require '../src/DataTypeCSV.php';
+    require '../src/DataTypeJSON.php';
+    require '../src/DataTypeXML.php';
+
     require 'print_table.php';
 
-    use AwesomeDataLists\Data as Data;
-    use AwesomeDataLists\DataTypeCSV as DataTypeCSV;
-    use AwesomeDataLists\DataTypeJSON as DataTypeJSON;
-    use AwesomeDataLists\DataTypeXML as DataTypeXML;
+    use Cheich\AwesomeDataLists\Data as Data;
+    use Cheich\AwesomeDataLists\DataTypeCSV as DataTypeCSV;
+    use Cheich\AwesomeDataLists\DataTypeJSON as DataTypeJSON;
+    use Cheich\AwesomeDataLists\DataTypeXML as DataTypeXML;
 
     try {
       //

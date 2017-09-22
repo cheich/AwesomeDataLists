@@ -7,10 +7,12 @@
   <body>
     <?php
 
-    require '../autoload.php';
+    require '../src/Data.php';
+    require '../src/DataException.php';
+
     require 'print_table.php';
 
-    use AwesomeDataLists\Data as Data;
+    use Cheich\AwesomeDataLists\Data as Data;
 
     @ini_set('memory_limit','512M');
 
