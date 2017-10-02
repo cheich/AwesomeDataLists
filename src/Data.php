@@ -193,9 +193,9 @@ class Data implements \Countable, \Iterator, \Serializable, \ArrayAccess {
    *
    * @return mixed
    */
-	public function current() {
-		return $this->data[$this->index];
-	}
+  public function current() {
+    return $this->data[$this->index];
+  }
 
   /**
    * Reset cursor
